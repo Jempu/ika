@@ -1,0 +1,11 @@
+@import url("./main.css");
+:root {
+  --textColor: #fff;
+}
+
+body {
+  background-color: #0499f2;
+  background-image: linear-gradient(315deg, #0499f2 0%, #26f596 74%);
+  color: var(--textColor);
+}
+/*# sourceMappingURL=index.css.map */
