@@ -14,12 +14,12 @@
 </head>
 
 <body>
-    <?php require_once __DIR__ . '/content/nav.html'; ?>
+    <?php include dirname(__FILE__).'/content/nav.html'; ?>
 
     <h1>Ikatyros NY</h1>
     <p>Nettisivut ovat rakennuksen alla. Tule takaisin myöhemmin...</p>
 
-    <?php require_once __DIR__ . '/content/footer.html'; ?>
+    <?php include dirname(__FILE__).'/content/footer.html'; ?>
 </body>
 
 </html>
