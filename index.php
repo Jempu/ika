@@ -8,17 +8,18 @@
     <meta name="description" content="Ikatyros tarjoaa monenlaisia multimediapalveluita...">
     <meta name="keywords" content="kotisivut, websites, drone, kuvaus, dronekuvaus, it, multimedia">
     <link rel="shortcut icon" href="./img/ikatyros-logo.png" type="image/x-icon">
-    <title>Ikatyros NY</title>
+    <title>Ikatyros NY - Etusivut</title>
     <link rel="stylesheet" href="./css/index.css">
     <script type="text/javascript" src="./js/index.js"></script>
 </head>
 
 <body>
-    <?php require_once './content/nav.html'; ?>
+    <?php require_once __DIR__ . '/content/nav.html'; ?>
 
     <h1>Ikatyros NY</h1>
+    <p>Nettisivut ovat rakennuksen alla. Tule takaisin myöhemmin...</p>
 
-    <?php require_once './content/footer.html'; ?>
+    <?php require_once __DIR__ . '/content/footer.html'; ?>
 </body>
 
 </html>
