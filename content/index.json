@@ -1,0 +1,15 @@
+{
+    "site_status": "maintained",
+    "services": [
+        {
+            "id": "dronekuvaus",
+            "fullname": "Dronekuvauspalvelu",
+            "agreement": ""
+        },
+        {
+            "id": "kotisivut",
+            "fullname": "Nettisivuntekopalvelu",
+            "agreement": "- Varmistamme sivujesi toiminnan. Olemme tavoitettavissa joka päivä klo. 10-22 välisenä aikana. Voit myös lähettää viestiä sähköpostitse tai Discordissa (Ikatyros#...).\n- Oletus 5 päivää."
+        }
+    ]
+}

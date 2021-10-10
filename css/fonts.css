@@ -1,4 +1,8 @@
 @font-face {
+    font-family: Alice;
+    src: url('./fonts/alice/Alice-Regular.ttf');
+}
+@font-face {
     font-family: Exo;
     src: url('./fonts/exo/static/Exo-Regular.ttf');
 }

@@ -1,0 +1,21 @@
+{    
+    "files.exclude": {
+        "**/.vscode": true,
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "**/node_modules": true,
+        "**/LICENSE": true,
+        "**/README.md": true,
+        "**/*.map": true,
+        
+        "**/ajokuva": true,
+        "**/atk": true,
+        "**/dronekuvaus": true,
+        "**/kotisivut": true,
+        "**/ylioppilaat": true
+    }
+}

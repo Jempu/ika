@@ -1,4 +1,7 @@
 @import url("./main.css");
+@import url("./nav.css");
+@import url("./footer.css");
+@import url("./cart.css");
 :root {
   --textColor: #fff;
 }
@@ -6,6 +9,207 @@
 body {
   background-color: #0499f2;
   background-image: linear-gradient(315deg, #0499f2 0%, #26f596 74%);
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, input, li, option {
   color: var(--textColor);
+}
+
+.titlecard {
+  position: relative;
+  width: 100%;
+  min-height: 300px;
+  height: 80vh;
+  max-height: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.titlecard video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 150%;
+  z-index: -1;
+}
+
+.titlecard .logo {
+  width: 300px;
+  height: 300px;
+  z-index: 1;
+}
+
+.titlecard .style-header {
+  font-size: 8em;
+}
+
+.titlecard .double-down {
+  width: 58px;
+  height: 58px;
+  -webkit-filter: brightness(80%);
+          filter: brightness(80%);
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  transition: -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+}
+
+.titlecard .double-down:hover {
+  -webkit-transform: scale(110%);
+          transform: scale(110%);
+}
+
+.services {
+  position: relative;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "a b c d e";
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(33, 48, 42, 0.2)), to(rgba(33, 48, 42, 0.2))), url("../img/bridge.jpg");
+  background: linear-gradient(0deg, rgba(33, 48, 42, 0.2), rgba(33, 48, 42, 0.2)), url("../img/bridge.jpg");
+  background-size: cover;
+}
+
+.services .category {
+  position: relative;
+  width: 260px;
+  text-align: center;
+}
+
+.services .category img {
+  width: 100%;
+}
+
+.services .category a {
+  display: block;
+  font-size: 42px;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  margin-bottom: 20px;
+  text-decoration: none;
+}
+
+.services .category a:last-child {
+  margin-bottom: 0;
+}
+
+.services .category a:hover {
+  text-decoration: underline;
+}
+
+.services li {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+}
+
+.reviews {
+  position: relative;
+  width: 100vw;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.33), rgba(0, 0, 0, 0.33)), linear-gradient(142.43deg, #8AE9B3 8.78%, #C8D6E5 63.24%);
+  background-size: contain;
+}
+
+.reviews img {
+  width: 600px;
+}
+
+.services-body {
+  position: relative;
+  width: 100vw;
+}
+
+.services-body .icon {
+  width: 138px;
+  height: 138px;
+}
+
+.services-body img {
+  max-height: 50%;
+}
+
+.services-body .category#nettisivut #a, .services-body .category#nettisivut #b, .services-body .category#nettisivut #c {
+  position: relative;
+  width: 100%;
+  height: 60rem;
+}
+
+.services-body .category#nettisivut #a {
+  background-color: #285838;
+}
+
+.services-body .category#nettisivut #b {
+  background-color: #4C9B66;
+}
+
+.services-body .category#nettisivut #c {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #35B25F;
+  text-align: center;
+}
+
+.services-body .category#nettisivut #c h3 {
+  width: 100%;
+  margin: auto;
+}
+
+.add-to-cart {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 280px;
+  height: 100px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 48px;
+  background-color: #285838;
+  border: none;
+  -webkit-transition: background-color 0.08s ease, -webkit-transform 0.22s ease-in-out;
+  transition: background-color 0.08s ease, -webkit-transform 0.22s ease-in-out;
+  transition: transform 0.22s ease-in-out, background-color 0.08s ease;
+  transition: transform 0.22s ease-in-out, background-color 0.08s ease, -webkit-transform 0.22s ease-in-out;
+}
+
+.add-to-cart:hover {
+  -webkit-transform: scale(108%);
+          transform: scale(108%);
+}
+
+.add-to-cart:active {
+  background-color: #2F854C;
+}
+
+.add-to-cart img {
+  margin-left: 10px;
+  height: 50%;
 }
 /*# sourceMappingURL=index.css.map */

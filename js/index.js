@@ -1,16 +1,17 @@
-function loadHtml(html) {
-    var con = document.createElement('div');
-    var xhr = new XMLHttpRequest();
-    document.body.appendChild(con);
-    xhr.onreadystatechange = function (e) {
-        if (xhr.readyState == 4 && xhr.status == 200) {
-            con.innerHTML = xhr.responseText;
-        }
+
+// website previews
+
+$("#cloud9-carousel").Cloud9Carousel( {
+    buttonLeft: $("#buttons > .left"),
+    buttonRight: $("#buttons > .right"),
+    autoPlay: 0,
+    bringToFront: true,
+    onLoaded: function() {
+        
     }
-    xhr.open('GET', html, true);
-    xhr.setRequestHeader('Content-type', 'text/html');
-    xhr.send();
-}
+});
+
+// finally, check if has been redirected
 
 function checkAnchor() {
     let anchor = document.URL.split('#').length > 1 ? document.URL.split('#')[1] : null;
@@ -33,4 +34,4 @@ function checkAnchor() {
             break;
     }
 }
-checkAnchor()
+checkAnchor();
