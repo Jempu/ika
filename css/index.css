@@ -34,13 +34,16 @@ h1, h2, h3, h4, h5, h6, p, a, input, li, option {
   top: 0;
   left: 0;
   height: 150%;
-  z-index: -1;
+  z-index: 0;
+}
+
+.titlecard * {
+  z-index: 1;
 }
 
 .titlecard .logo {
   width: 300px;
   height: 300px;
-  z-index: 1;
 }
 
 .titlecard .style-header {
