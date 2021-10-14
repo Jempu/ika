@@ -15,8 +15,7 @@
     <script src="./js/jquery-3.6.0.min/jquery.js"></script>
     <script src="./js/cloud9carousel/jquery.cloud9carousel.js"></script>
 <?php
-function loadHtml(string $fileName, string $fileType = 'html', string $path = 'content/component')
-{
+function loadHtml(string $fileName, string $fileType = 'html', string $path = 'content/component') {
     include dirname(__FILE__) . "/$path/$fileName.$fileType";
 }
 ?>
@@ -25,38 +24,38 @@ function loadHtml(string $fileName, string $fileType = 'html', string $path = 'c
 <body>
 
 <?php
-loadHtml('services-body');
+$indexJsonFile = './content/index.json';
+$indexJsonData = json_decode(file_get_contents($indexJsonFile), true);
+$response = $indexJsonData['site_status'];
 
-// $response = 'normal';
-
-// switch ($response) {
-//     case 'busy-fully':
-//         loadHtml('res-busy');
-//         break;
-//     case 'busy':
-//         loadHtml('titlecard');
-//         loadHtml('res-busy');
-//         loadHtml('footer');
-//         break;
-//     case 'maintain-fully':
-//         loadHtml('res-maintained');
-//         break;
-//     case 'maintain-services':
-//         loadHtml('titlecard');
-//         loadHtml('res-maintained');
-//         loadHtml('footer');
-//         break;
-//     default:
-//         loadHtml('titlecard');
-//         loadHtml('nav');
-//         loadHtml('nav-cart-btn');
-//         loadHtml('cart');
-//         loadHtml('services-head');
-//         loadHtml('services-body');
-//         loadHtml('reviews');
-//         loadHtml('footer');
-//         break;
-// }
+switch ($response) {
+    case 'busy-fully':
+        loadHtml('res-busy');
+        break;
+    case 'busy':
+        loadHtml('titlecard');
+        loadHtml('res-busy');
+        loadHtml('footer');
+        break;
+    case 'maintain-fully':
+        loadHtml('res-maintained');
+        break;
+    case 'maintain-services':
+        loadHtml('titlecard');
+        loadHtml('res-maintained');
+        loadHtml('footer');
+        break;
+    default:
+        loadHtml('titlecard');
+        loadHtml('nav');
+        loadHtml('nav-cart-btn');
+        loadHtml('cart');
+        loadHtml('services-head');
+        loadHtml('services-body');
+        loadHtml('reviews');
+        loadHtml('footer');
+        break;
+}
 ?>
     <script type="text/javascript" src="./js/index.js"></script>
 </body>

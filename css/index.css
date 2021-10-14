@@ -22,19 +22,11 @@ h1, h2, h3, h4, h5, h6, p, a, input, li, option {
   min-height: 300px;
   height: 80vh;
   max-height: 1200px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  overflow: hidden;
 }
 
 .titlecard video {
@@ -60,29 +52,20 @@ h1, h2, h3, h4, h5, h6, p, a, input, li, option {
   height: 58px;
   -webkit-filter: brightness(80%);
           filter: brightness(80%);
-  -webkit-transition: -webkit-transform 0.3s ease-out;
-  transition: -webkit-transform 0.3s ease-out;
   transition: transform 0.3s ease-out;
-  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
 }
 
 .titlecard .double-down:hover {
-  -webkit-transform: scale(110%);
-          transform: scale(110%);
+  transform: scale(110%);
 }
 
 .services {
   position: relative;
   width: 100%;
-  display: -ms-grid;
   display: grid;
-      grid-template-areas: "a b c d e";
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(33, 48, 42, 0.2)), to(rgba(33, 48, 42, 0.2))), url("../img/bridge.jpg");
+  grid-template-areas: "a b c d e";
+  align-items: center;
+  justify-content: space-around;
   background: linear-gradient(0deg, rgba(33, 48, 42, 0.2), rgba(33, 48, 42, 0.2)), url("../img/bridge.jpg");
   background-size: cover;
 }
@@ -159,15 +142,10 @@ h1, h2, h3, h4, h5, h6, p, a, input, li, option {
 }
 
 .services-body .category#nettisivut #c {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   justify-items: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   background-color: #35B25F;
   text-align: center;
 }
@@ -179,29 +157,19 @@ h1, h2, h3, h4, h5, h6, p, a, input, li, option {
 
 .add-to-cart {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 280px;
   height: 100px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   border-radius: 48px;
   background-color: #285838;
   border: none;
-  -webkit-transition: background-color 0.08s ease, -webkit-transform 0.22s ease-in-out;
-  transition: background-color 0.08s ease, -webkit-transform 0.22s ease-in-out;
   transition: transform 0.22s ease-in-out, background-color 0.08s ease;
-  transition: transform 0.22s ease-in-out, background-color 0.08s ease, -webkit-transform 0.22s ease-in-out;
 }
 
 .add-to-cart:hover {
-  -webkit-transform: scale(108%);
-          transform: scale(108%);
+  transform: scale(108%);
 }
 
 .add-to-cart:active {
