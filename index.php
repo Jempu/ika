@@ -43,7 +43,7 @@ switch ($response) {
     case 'maintain-services':
         loadHtml('titlecard');
         loadHtml('res-maintained');
-        loadHtml('footer');
+        // loadHtml('footer');
         break;
     default:
         loadHtml('titlecard');
