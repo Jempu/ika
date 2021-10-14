@@ -1,4 +1,24 @@
 
+// website category slider
+
+const slider = $('.slider');
+const sliderUl = $(slider).find('ul');
+var sliderSlides = $(sliderUl).children();
+var slideCount = sliderSlides.length;
+var slideWidth = $(sliderUl).find('li').width();
+var slideHeight = $(sliderUl).find('li').height();
+var currentSlide = -1;
+var isTransitioning = false;
+function setSlider() {
+    sliderSlides = $(sliderUl).find("li");
+    slideCount = sliderSlides.length;
+    slideWidth = $(sliderSlides).width();
+    slideHeight = $(sliderSlides).height();
+    $(sliderUl).css({ "width": slideCount * slideWidth, "margin-left": - slideWidth });
+    $(sliderUl).find("li:last-child").prependTo($(sliderUl));
+}
+setSlider();
+
 // website previews
 
 $("#cloud9-carousel").Cloud9Carousel( {

@@ -35,22 +35,22 @@ switch ($response) {
     case 'busy':
         loadHtml('titlecard');
         loadHtml('res-busy');
-        loadHtml('footer');
+        // loadHtml('footer');
         break;
-    case 'maintain-fully':
-        loadHtml('res-maintained');
-        break;
-    case 'maintain-services':
+    case 'maintain':
         loadHtml('titlecard');
         loadHtml('res-maintained');
         // loadHtml('footer');
+        break;
+    case 'maintain-fully':
+        loadHtml('res-maintained');
         break;
     default:
         loadHtml('titlecard');
         loadHtml('nav');
         loadHtml('nav-cart-btn');
         loadHtml('cart');
-        loadHtml('services-head');
+        loadHtml('services-list');
         loadHtml('services-body');
         loadHtml('reviews');
         loadHtml('footer');

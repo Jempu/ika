@@ -30,24 +30,34 @@ h1, h2, h3, h4, h5, h6, p, a, input, li, option
     video
         position: absolute
         top: 0
-        left: 0
+        left: 50%
+        transform: translateX(-50%)
         height: 150%
         z-index: 0
     *
         z-index: 1
     .logo
-        width: 300px
-        height: 300px
+        width: calc( 150px + 8vw )
+        height: calc( 150px + 8vw )
     .style-header
-        font-size: 8em
+        font-size: calc( 22px + 6vw )
+    p
+        font-size: calc( 12px + 1vw )
+        text-align: center
     .double-down
-        width: 58px
-        height: 58px
+        width: 64px
+        height: 64px
         filter: brightness(80%)
-        transition: transform 0.3s ease-out
+        transition: transform 0.3s ease-out, filter 0.1s ease, background 0.2s ease-out
         margin: 2rem 0
+        pointer-events: all
+        cursor: pointer
+        border-radius: 32px
+        padding: 0.7rem
         &:hover
             transform: scale(110%)
+            filter: brightness(100%)
+            background: rgba(255, 255, 180, 0.4)
 
 .services
     position: relative
@@ -66,6 +76,7 @@ h1, h2, h3, h4, h5, h6, p, a, input, li, option
             width: 100%
         a
             display: block
+            color: #fff
             font-size: 42px
             border: 4px solid rgba(255, 255, 255, 0.3)
             border-radius: 20px
@@ -95,25 +106,30 @@ h1, h2, h3, h4, h5, h6, p, a, input, li, option
         height: 138px
     img
         max-height: 50%
-    .category#nettisivut
-        #a, #b, #c
-            position: relative
-            width: 100%
-            height: $webServiceSlideHeight
-        #a
-            background-color: #285838
-        #b
-            background-color: #4C9B66
-        #c
-            display: flex
-            flex-wrap: wrap
-            justify-items: center
-            align-items: center
-            background-color: #35B25F
-            text-align: center
-            h3
+    .category
+        position: relative
+        width: 100%
+        &#nettisivut
+            #a, #b, #c
+                position: relative
                 width: 100%
-                margin: auto
+                height: $webServiceSlideHeight
+            #a
+                background-color: #285838
+            #b
+                background-color: #4C9B66
+            #c
+                display: flex
+                flex-wrap: wrap
+                justify-items: center
+                align-items: center
+                background-color: #35B25F
+                text-align: center
+                div
+                    padding: 0 calc(7vw + 1vmin)
+                h3
+                    width: 100%
+                    margin: auto
 
 .add-to-cart
     position: relative
