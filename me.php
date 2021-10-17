@@ -12,9 +12,9 @@
 </head>
 
 <body>
-    <?php include dirname(__FILE__).'/content/nav.html'; ?>
+    <?php include dirname(__FILE__).'/content/component/nav.html'; ?>
 
-    <img src="./img/ikatyros-2021-portrait.png" alt="Ikatyros 2021 portrait">
+    <img src="./img/ikatyros-2021-portrait.jpg" alt="Ikatyros 2021 portrait">
     <h1>Me OLEMME IKATYROS NY</h1>
     
     <div>
@@ -38,7 +38,7 @@
         Haluamme olla koko prosessin aikana mahdollisimman läheisiä ja läpinäkyviä asiakkaan kanssa ja otamme mieluusti toiveita vastaan. Siten luomme pitkäaikaisia muistoja yhdessä.”
     </p>
 
-    <?php include dirname(__FILE__).'/content/footer.html'; ?>
+    <?php include dirname(__FILE__).'/content/component/footer.html'; ?>
 </body>
 
 </html>

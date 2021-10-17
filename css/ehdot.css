@@ -1,0 +1,17 @@
+@import url("./main.css");
+body {
+  max-width: 1280px;
+  padding-top: 9vh;
+  padding-bottom: 14vh;
+  margin: auto;
+  color: #fff;
+  font-size: calc( 18px + 1vmin);
+  text-align: left;
+  background-color: #2b2d2b;
+  font-family: sans-serif;
+}
+
+h1, h2 {
+  margin: 1.7rem 0;
+}
+/*# sourceMappingURL=ehdot.css.map */

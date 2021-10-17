@@ -1,11 +1,160 @@
 <div class="cart">
     <h1>Ostoskärry</h1>
     <img src="./img/cart.png" alt="Kärry">
+    <img src="./img/right-arrow.png" class="close" alt="Sulje kärry">
     
-    <h2>Dronekuvaus</h2>
-    <img src="./img/drone.png" alt="Dronekuvaus">
-    <a href="#">Tietoa</a>
-    <a href="#">Luvat</a>
+    <div class="container">
+        <div class="item">
+            <img src="./img/drone.png" alt="Dronekuvaus">
+            <h2>Dronekuvaus</h2>
+            <a href="#">Tietoa</a>
+            <a href="#">Luvat</a>
+        </div>
+    </div>
+
+    <input type="text" name="" id="" placeholder="Asiakkaan etu- ja sukunimi">
+    <input type="text" name="" id="" placeholder="Sähköpostiosoite">
+    <textarea name="" id="" cols="30" rows="10" placeholder="Tilauksen yksityiskohdat"></textarea>
+    
+    <div>
+        Lähetämme sähköpostiisi tilausvahvistuksen ja toimeksiantosopimuksen, kun olemme vastaanottaneet tilauspyyntösi.
+    </div>
+
+    <div>
+        <input type="checkbox" name="" id="">
+        <p>Luin <a href="./kayttoehdot/index.php" target="#">Ikatyros NY:n palveluiden ehdot</a> sekä hyväksyn ne.</p>
+    </div>
 
     <button>Lähetä</button>
 </div>
+<script type="text/javascript">
+    const cart = $('.cart');
+    const cartBtn = $('.nav-cart');
+    const cartBtnTxt = $(cartBtn).find('#count');
+    var addedServices = [];
+    var cartEnabled = false;
+    function toggleCart(value) {
+        cartEnabled = value ?? !cartEnabled;
+        if (cartEnabled) {
+            cart.css({ display: 'block', transform: 'translateX(100%)' });
+            cart.animate({ translate: 0 }, {
+                step: function(now,fx) {
+                    $(this).css({ transform: 'translateX('+now+'%)' });
+                }, duration: 310, specialEasing: { width: "linear", height: "easeInOut" }
+            });
+        } else {
+            cart.animate({ translate: 100 }, {
+                step: function(now,fx) {
+                    $(this).css({ transform: 'translateX('+now+'%)' });
+                }, duration: 500, specialEasing: { width: "linear", height: "easeOut" }, complete: function() {
+                    cart.css({ display: 'none' });
+                }
+            });
+        }
+    }
+    function addToCart(serviceName) {
+        if (addedServices.includes(serviceName) || serviceName == '') return;
+        function getHtml(serviceName) {
+            switch (serviceName) {
+                case 'nettisivut': return `
+                    <img src="./img/drone.png" alt="Henkilokuvaus">
+                    <h2>Henkilökuvaus</h2>
+                    <a href="./ehdot.php#dronekuvaus-tietoa">Tietoa</a>
+                    <a href="./ehdot.php#dronekuvaus-luvat">Luvat</a>
+                    <div class="item">
+                `;
+                case 'henkilokuvaus': return `
+                    <img src="./img/drone.png" alt="Henkilokuvaus">
+                    <h2>Henkilökuvaus</h2>
+                    <a href="./ehdot.php#dronekuvaus-tietoa">Tietoa</a>
+                    <a href="./ehdot.php#dronekuvaus-luvat">Luvat</a>
+                    <div class="item">
+                `;
+                case 'tapahtumakuvaus': return `
+                    <img src="./img/drone.png" alt="Tapahtumakuvaus">
+                    <h2>Tapahtumakuvaus</h2>
+                    <a href="./ehdot.php#dronekuvaus-tietoa">Tietoa</a>
+                    <a href="./ehdot.php#dronekuvaus-luvat">Luvat</a>
+                    <div class="item">
+                `;
+                case 'synttarikuvaus': return `
+                    <img src="./img/drone.png" alt="Synttarikuvaus">
+                    <h2>Synttärikuvaus</h2>
+                    <a href="./ehdot.php#dronekuvaus-tietoa">Tietoa</a>
+                    <a href="./ehdot.php#dronekuvaus-luvat">Luvat</a>
+                    <div class="item">
+                `;
+                case 'haakuvaus': return `
+                    <img src="./img/drone.png" alt="Haakuvaus">
+                    <h2>Hääkuvaus</h2>
+                    <a href="./ehdot.php#dronekuvaus-tietoa">Tietoa</a>
+                    <a href="./ehdot.php#dronekuvaus-luvat">Luvat</a>
+                    <div class="item">
+                `;
+                case 'ajoneuvokuvaus': return `
+                    <img src="./img/drone.png" alt="Ajoneuvokuvaus">
+                    <h2>Ajoneuvokuvaus</h2>
+                    <a href="./ehdot.php#dronekuvaus-tietoa">Tietoa</a>
+                    <a href="./ehdot.php#dronekuvaus-luvat">Luvat</a>
+                    <div class="item">
+                `;
+                case 'driftauskuvaus': return `
+                    <img src="./img/drone.png" alt="Driftauskuvaus">
+                    <h2>Driftauskuvaus</h2>
+                    <a href="./ehdot.php#dronekuvaus-tietoa">Tietoa</a>
+                    <a href="./ehdot.php#dronekuvaus-luvat">Luvat</a>
+                    <div class="item">
+                `;
+                case 'rakennuskuvaus': return `
+                    <img src="./img/drone.png" alt="Rakennuskuvaus">
+                    <h2>Rakennuskuvaus</h2>
+                    <a href="./ehdot.php#dronekuvaus-tietoa">Tietoa</a>
+                    <a href="./ehdot.php#dronekuvaus-luvat">Luvat</a>
+                    <div class="item">
+                `;
+                case 'huoltokuvaus': return `
+                    <img src="./img/drone.png" alt="Huoltokuvaus">
+                    <h2>Huoltokuvaus</h2>
+                    <a href="./ehdot.php#dronekuvaus-tietoa">Tietoa</a>
+                    <a href="./ehdot.php#dronekuvaus-luvat">Luvat</a>
+                    <div class="item">
+                `;
+                case 'editointi': return `
+                    <img src="./img/drone.png" alt="Editointi">
+                    <h2>Editointi</h2>
+                    <a href="./ehdot.php#dronekuvaus-tietoa">Tietoa</a>
+                    <a href="./ehdot.php#dronekuvaus-luvat">Luvat</a>
+                    <div class="item">
+                `;
+                case 'atk': return `
+                    <img src="./img/drone.png" alt="Atk-tuki">
+                    <h2>ATK-tuki</h2>
+                    <a href="./ehdot.php#dronekuvaus-tietoa">Tietoa</a>
+                    <a href="./ehdot.php#dronekuvaus-luvat">Luvat</a>
+                    <div class="item">
+                `;
+                default: return '';
+            }
+        }
+        const gotHtml = getHtml(serviceName);
+        if (gotHtml == '') return;
+        addedServices.push(serviceName);
+        console.log(`Added ${serviceName} to cart!`);
+        $(cartBtnTxt).html(addedServices.length);
+        const div = document.createElement('div');
+        div.className = 'item';
+        $(div).html(gotHtml);
+        $(cart).find('.container').append(div);
+    }
+    $(cartBtn).click(function () {
+        toggleCart(true);
+    });
+    $(cart).find('.close').click(function () {
+        toggleCart(false);
+    });
+    $(function () {
+        $('.add-to-cart').click(function () {
+            addToCart($(this).parent().get(0).id);
+        });
+    });
+</script>

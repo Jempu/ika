@@ -31,28 +31,31 @@ $response = $indexJsonData['site_status'];
 switch ($response) {
     case 'busy-fully':
         loadHtml('res-busy');
+        loadHtml('pitch');
         break;
     case 'busy':
         loadHtml('titlecard');
         loadHtml('res-busy');
-        // loadHtml('footer');
+        loadHtml('pitch');
         break;
     case 'maintain':
         loadHtml('titlecard');
         loadHtml('res-maintained');
-        // loadHtml('footer');
+        loadHtml('pitch');
         break;
     case 'maintain-fully':
         loadHtml('res-maintained');
+        loadHtml('pitch');
         break;
     default:
         loadHtml('titlecard');
-        loadHtml('nav');
+        // loadHtml('nav');
         loadHtml('nav-cart-btn');
         loadHtml('cart');
         loadHtml('services-list');
-        loadHtml('services-body');
-        loadHtml('reviews');
+        loadHtml('services-body-simple');
+        // loadHtml('reviews');
+        loadHtml('pitch');
         loadHtml('footer');
         break;
 }

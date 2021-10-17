@@ -2,10 +2,44 @@
   position: fixed;
   display: none;
   min-width: 300px;
-  width: 30vw;
+  width: calc( 200px + 18vw);
+  min-height: 100vh;
   top: 0;
   right: 0;
-  z-index: 60;
+  z-index: 100;
   background: linear-gradient(177.22deg, #BB9292 -0.64%, #7F62CF 100.05%);
+  background-size: cover;
+  transition: transform 0.3s ease-out;
+  text-align: center;
+}
+
+.cart div {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 2vw 2vw;
+}
+
+.cart .close {
+  cursor: pointer;
+  pointer-events: all;
+}
+
+.cart img {
+  width: 8rem;
+  height: 8rem;
+}
+
+.cart input[type="text"] {
+  background: darkgray;
+}
+
+.cart input[type="checkbox"] {
+  width: 32px;
+  height: 32px;
+  margin: 0 auto;
 }
 /*# sourceMappingURL=cart.css.map */
