@@ -25,12 +25,14 @@ body:before, body:after {
 }
 
 body:before {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), color-stop(64.06%, rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0)));
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.1) 64.06%, rgba(0, 0, 0, 0) 100%);
   top: 0;
   height: 18%;
 }
 
 body:after {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.08)), to(rgba(0, 0, 0, 0)));
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0) 100%);
   bottom: 0;
   height: 3%;
@@ -46,10 +48,19 @@ h1, h2, h3, h4, h5, h6, p, a, input, li, option {
   min-height: 300px;
   height: 80vh;
   max-height: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
   overflow: hidden;
 }
 
@@ -57,7 +68,8 @@ h1, h2, h3, h4, h5, h6, p, a, input, li, option {
   position: absolute;
   top: 0;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   height: 150%;
   z-index: 0;
 }
@@ -86,9 +98,10 @@ h1, h2, h3, h4, h5, h6, p, a, input, li, option {
   height: 64px;
   -webkit-filter: brightness(80%);
           filter: brightness(80%);
-  transition: transform 0.3s ease-out, background 0.2s ease-out, -webkit-filter 0.1s ease;
+  -webkit-transition: background 0.2s ease-out, -webkit-transform 0.3s ease-out, -webkit-filter 0.1s ease;
+  transition: background 0.2s ease-out, -webkit-transform 0.3s ease-out, -webkit-filter 0.1s ease;
   transition: transform 0.3s ease-out, filter 0.1s ease, background 0.2s ease-out;
-  transition: transform 0.3s ease-out, filter 0.1s ease, background 0.2s ease-out, -webkit-filter 0.1s ease;
+  transition: transform 0.3s ease-out, filter 0.1s ease, background 0.2s ease-out, -webkit-transform 0.3s ease-out, -webkit-filter 0.1s ease;
   margin: 2rem 0;
   pointer-events: all;
   cursor: pointer;
@@ -97,7 +110,8 @@ h1, h2, h3, h4, h5, h6, p, a, input, li, option {
 }
 
 .titlecard .double-down:hover {
-  transform: scale(110%);
+  -webkit-transform: scale(110%);
+          transform: scale(110%);
   -webkit-filter: brightness(100%);
           filter: brightness(100%);
   background: rgba(255, 255, 220, 0.3);
@@ -106,10 +120,17 @@ h1, h2, h3, h4, h5, h6, p, a, input, li, option {
 .services {
   position: relative;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(33, 48, 42, 0.65)), to(rgba(33, 48, 42, 0.56))), url("../img/bridge.jpg");
   background: linear-gradient(0deg, rgba(33, 48, 42, 0.65), rgba(33, 48, 42, 0.56)), url("../img/bridge.jpg");
   background-size: cover;
   padding-bottom: 4.5rem;
@@ -199,7 +220,8 @@ h1, h2, h3, h4, h5, h6, p, a, input, li, option {
   position: relative;
   width: 80vw;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .services-body section {
@@ -209,8 +231,12 @@ h1, h2, h3, h4, h5, h6, p, a, input, li, option {
 }
 
 .services-body section .w-100 {
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .services-body section .w-100 img {
@@ -224,15 +250,22 @@ h1, h2, h3, h4, h5, h6, p, a, input, li, option {
 
 .services-body section h2.w-100 {
   margin: 0 auto;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
 }
 
 .services-body section .container {
   max-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .services-body section .container .col-md-4 {
@@ -256,7 +289,8 @@ h1, h2, h3, h4, h5, h6, p, a, input, li, option {
 
 .services-body section .add-to-cart {
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .cloud9-carousel#car_1 {
@@ -265,9 +299,15 @@ h1, h2, h3, h4, h5, h6, p, a, input, li, option {
 }
 
 .cloud9-carousel .cloud9-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
 }
 
@@ -279,12 +319,18 @@ h1, h2, h3, h4, h5, h6, p, a, input, li, option {
 
 .nav-cart {
   position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   right: 4vw;
   top: 6vh;
   height: 8rem;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   z-index: 60;
   background-color: gray;
   padding: 2rem;
@@ -297,19 +343,29 @@ h1, h2, h3, h4, h5, h6, p, a, input, li, option {
 
 .add-to-cart {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 280px;
   height: 100px;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border-radius: 48px;
   background-color: #285838;
   border: none;
+  -webkit-transition: background-color 0.08s ease, -webkit-transform 0.22s ease-in-out;
+  transition: background-color 0.08s ease, -webkit-transform 0.22s ease-in-out;
   transition: transform 0.22s ease-in-out, background-color 0.08s ease;
+  transition: transform 0.22s ease-in-out, background-color 0.08s ease, -webkit-transform 0.22s ease-in-out;
 }
 
 .add-to-cart:hover {
-  transform: scale(108%);
+  -webkit-transform: scale(108%);
+          transform: scale(108%);
 }
 
 .add-to-cart:active {

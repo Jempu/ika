@@ -1,0 +1,79 @@
+
+body
+    width: 100vw
+    height: 100vh
+
+$sideslider_li_active: #B0EBEE
+$sideslider_li_inactive: #373737
+
+servicecontainer
+    position: relative
+    display: grid
+    grid-template-columns: repeat(2, 80%)
+    gap: 30px
+
+sideslider
+    position: fixed
+    width: auto
+    height: 80%
+    right: 0
+    top: 50%
+    margin-right: 4rem
+    transform: translateY(-50%)
+    display: flex
+    flex-direction: column
+    justify-content: space-evenly
+    // black_right_border
+    &::before
+        position: absolute
+        width: 4px
+        height: 100%
+        background-color: #303030
+        right: 0
+        content: ''
+    img
+        width: 3rem
+        height: 3rem
+        margin: 0 2rem
+        transition: filter 0.2s ease-out
+    li
+        position: relative
+        display: flex
+        align-items: center
+        justify-content: right
+        transition: transform 0.2s ease-out
+        &.active
+            transform: translateX(-4%) scale(108%)
+            &::before
+                background-color: $sideslider_li_active
+            h1
+                color: $sideslider_li_active
+            img
+                filter: brightness(100%)
+        &::before
+            position: absolute
+            width: 20px
+            height: 4px
+            background-color: #373737
+            right: 0
+            transform: translateX(50%)
+            content: ''
+        h1
+            color: $sideslider_li_inactive
+        img
+            filter: brightness(50%)
+
+
+.cloud9-carousel
+    &#carousel1
+        height: 300px
+        width: 40%
+    .cloud9-item
+        display: flex
+        align-items: center
+        justify-content: center
+        text-align: center
+        img
+            max-width: 100%
+            height: 100%
+            max-height: 220px
